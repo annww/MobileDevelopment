@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <!-- Tiêu đề ứng dụng -->
+
+        <!-- Lưới các nút -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="2dp"
+            android:lineHeight="65dp"
+            android:text="BÀI THI\nGIỮA KỲ"
+            android:textAlignment="center"
+            android:textColor="#fedcdd"
+            android:textSize="50sp"
+            android:textStyle="bold|italic" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp">
+
+            <!-- Nút 1 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnbai1"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bai1"
+                android:onClick="Bai1View"/>
+
+            <!-- Nút 2 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnbai2"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bai2"
+                android:onClick="Bai2View"/>
+
+            <!-- Nút 3 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnbai3"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bai3"
+                android:onClick="Bai3View"/>
+
+            <!-- Nút 4 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnbai4"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_margin="8dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bai4"
+                android:onClick="Bai4View"/>
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
