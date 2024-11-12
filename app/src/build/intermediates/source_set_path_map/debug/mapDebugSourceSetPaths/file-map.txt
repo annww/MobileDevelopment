@@ -1,0 +1,47 @@
+com.example.a64130758_baitap.app-recyclerview-1.1.0-0 C:\Users\samh5\.gradle\caches\transforms-4\074a2da02204987fb2e93fc04680d371\transformed\recyclerview-1.1.0\res
+com.example.a64130758_baitap.app-constraintlayout-2.1.4-1 C:\Users\samh5\.gradle\caches\transforms-4\09c254322115893bb30e96cb39c4923e\transformed\constraintlayout-2.1.4\res
+com.example.a64130758_baitap.app-lifecycle-process-2.8.6-2 C:\Users\samh5\.gradle\caches\transforms-4\10776b681ebfec274014a6bb02c3d85f\transformed\lifecycle-process-2.8.6\res
+com.example.a64130758_baitap.app-drawerlayout-1.1.1-3 C:\Users\samh5\.gradle\caches\transforms-4\11c9bd26b3a13a33b825d23bfd13c8d0\transformed\drawerlayout-1.1.1\res
+com.example.a64130758_baitap.app-lifecycle-livedata-core-ktx-2.8.6-4 C:\Users\samh5\.gradle\caches\transforms-4\121e6e511527603ffac34b16fdffc243\transformed\lifecycle-livedata-core-ktx-2.8.6\res
+com.example.a64130758_baitap.app-emoji2-1.3.0-5 C:\Users\samh5\.gradle\caches\transforms-4\18b94b460fc682dad5344823fdef638c\transformed\emoji2-1.3.0\res
+com.example.a64130758_baitap.app-savedstate-1.2.1-6 C:\Users\samh5\.gradle\caches\transforms-4\1f629844b3e5f6f3551c3bc0dc2db6f6\transformed\savedstate-1.2.1\res
+com.example.a64130758_baitap.app-core-1.13.0-7 C:\Users\samh5\.gradle\caches\transforms-4\335d465d6708732131b5e2ac00291f92\transformed\core-1.13.0\res
+com.example.a64130758_baitap.app-cardview-1.0.0-8 C:\Users\samh5\.gradle\caches\transforms-4\37c29b0a84ed601b8c3cedd1a55dea52\transformed\cardview-1.0.0\res
+com.example.a64130758_baitap.app-lifecycle-livedata-core-2.8.6-9 C:\Users\samh5\.gradle\caches\transforms-4\3bd2936016d01e364be9b5f9109c5413\transformed\lifecycle-livedata-core-2.8.6\res
+com.example.a64130758_baitap.app-core-runtime-2.2.0-10 C:\Users\samh5\.gradle\caches\transforms-4\49ee1e7c3fcba522efe50e3b945ca984\transformed\core-runtime-2.2.0\res
+com.example.a64130758_baitap.app-activity-ktx-1.8.0-11 C:\Users\samh5\.gradle\caches\transforms-4\6d124231d410837bc55aa7ea68693912\transformed\activity-ktx-1.8.0\res
+com.example.a64130758_baitap.app-transition-1.5.0-12 C:\Users\samh5\.gradle\caches\transforms-4\6ff1e4dcc91bb53e42203d43e20c28cb\transformed\transition-1.5.0\res
+com.example.a64130758_baitap.app-profileinstaller-1.3.1-13 C:\Users\samh5\.gradle\caches\transforms-4\740a12807f3545e7e970d04ec44d214d\transformed\profileinstaller-1.3.1\res
+com.example.a64130758_baitap.app-navigation-ui-2.8.1-14 C:\Users\samh5\.gradle\caches\transforms-4\7893f5f766a58094edf21c51adbbba59\transformed\navigation-ui-2.8.1\res
+com.example.a64130758_baitap.app-material-1.12.0-15 C:\Users\samh5\.gradle\caches\transforms-4\7992babeaed82c4f67e4c992c692e46a\transformed\material-1.12.0\res
+com.example.a64130758_baitap.app-lifecycle-livedata-2.8.6-16 C:\Users\samh5\.gradle\caches\transforms-4\817ea06d6966fe681b8d1d9127d1e35d\transformed\lifecycle-livedata-2.8.6\res
+com.example.a64130758_baitap.app-viewpager2-1.0.0-17 C:\Users\samh5\.gradle\caches\transforms-4\89dc1ebc26cf701a234dfaf1eef62f3b\transformed\viewpager2-1.0.0\res
+com.example.a64130758_baitap.app-navigation-fragment-2.8.1-18 C:\Users\samh5\.gradle\caches\transforms-4\8e3d017fc7edf98d45c135e2980db382\transformed\navigation-fragment-2.8.1\res
+com.example.a64130758_baitap.app-fragment-1.6.2-19 C:\Users\samh5\.gradle\caches\transforms-4\906b5aa4faf44edac41b9b9fd28460f8\transformed\fragment-1.6.2\res
+com.example.a64130758_baitap.app-lifecycle-viewmodel-savedstate-2.8.6-20 C:\Users\samh5\.gradle\caches\transforms-4\9680f054227993e1c0d3dcac853c5059\transformed\lifecycle-viewmodel-savedstate-2.8.6\res
+com.example.a64130758_baitap.app-lifecycle-livedata-ktx-2.8.6-21 C:\Users\samh5\.gradle\caches\transforms-4\984524b08b74ccdd6b8586fe53e0b614\transformed\lifecycle-livedata-ktx-2.8.6\res
+com.example.a64130758_baitap.app-appcompat-resources-1.7.0-22 C:\Users\samh5\.gradle\caches\transforms-4\a522ff8bfba79e793989080287b25858\transformed\appcompat-resources-1.7.0\res
+com.example.a64130758_baitap.app-activity-1.8.0-23 C:\Users\samh5\.gradle\caches\transforms-4\a68b6a8427802829c2dfb8d16c909eb4\transformed\activity-1.8.0\res
+com.example.a64130758_baitap.app-window-1.0.0-24 C:\Users\samh5\.gradle\caches\transforms-4\af26ab8a23e1a542f85c7b78353f227b\transformed\window-1.0.0\res
+com.example.a64130758_baitap.app-core-ktx-1.13.0-25 C:\Users\samh5\.gradle\caches\transforms-4\b6ca88d72a8cb72ce023fe71955ffc87\transformed\core-ktx-1.13.0\res
+com.example.a64130758_baitap.app-annotation-experimental-1.4.1-26 C:\Users\samh5\.gradle\caches\transforms-4\ba94fc7b4c051419982af235979f2b6d\transformed\annotation-experimental-1.4.1\res
+com.example.a64130758_baitap.app-lifecycle-viewmodel-release-27 C:\Users\samh5\.gradle\caches\transforms-4\be33b710d664f160987b4e2e35858529\transformed\lifecycle-viewmodel-release\res
+com.example.a64130758_baitap.app-lifecycle-runtime-release-28 C:\Users\samh5\.gradle\caches\transforms-4\c31a42259769a026f79bfe755281828e\transformed\lifecycle-runtime-release\res
+com.example.a64130758_baitap.app-startup-runtime-1.1.1-29 C:\Users\samh5\.gradle\caches\transforms-4\c383eb38816d8d97846249d2bf88a7bb\transformed\startup-runtime-1.1.1\res
+com.example.a64130758_baitap.app-navigation-common-2.8.1-30 C:\Users\samh5\.gradle\caches\transforms-4\c8774acb7e71f7164bdbb399cdc1a098\transformed\navigation-common-2.8.1\res
+com.example.a64130758_baitap.app-navigation-runtime-2.8.1-31 C:\Users\samh5\.gradle\caches\transforms-4\d62f617f71f6f4aa55b1f8aa497ac12c\transformed\navigation-runtime-2.8.1\res
+com.example.a64130758_baitap.app-fragment-ktx-1.6.2-32 C:\Users\samh5\.gradle\caches\transforms-4\e4a40f24783aa255126405c154ca2df0\transformed\fragment-ktx-1.6.2\res
+com.example.a64130758_baitap.app-emoji2-views-helper-1.3.0-33 C:\Users\samh5\.gradle\caches\transforms-4\e4bedd40254c413ffe9d9792f731a10e\transformed\emoji2-views-helper-1.3.0\res
+com.example.a64130758_baitap.app-lifecycle-viewmodel-ktx-2.8.6-34 C:\Users\samh5\.gradle\caches\transforms-4\e7a07180c6549972c0ba1ae584cc3e2e\transformed\lifecycle-viewmodel-ktx-2.8.6\res
+com.example.a64130758_baitap.app-appcompat-1.7.0-35 C:\Users\samh5\.gradle\caches\transforms-4\e8e10631e73e1ef1d7d8bff6ff611697\transformed\appcompat-1.7.0\res
+com.example.a64130758_baitap.app-coordinatorlayout-1.1.0-36 C:\Users\samh5\.gradle\caches\transforms-4\ec524cfff05e758b25eab1c9200582d3\transformed\coordinatorlayout-1.1.0\res
+com.example.a64130758_baitap.app-savedstate-ktx-1.2.1-37 C:\Users\samh5\.gradle\caches\transforms-4\edd34d47711073c1dc0a823fa12b244e\transformed\savedstate-ktx-1.2.1\res
+com.example.a64130758_baitap.app-slidingpanelayout-1.2.0-38 C:\Users\samh5\.gradle\caches\transforms-4\f5a978433eadbee1fbcc687bb5b5b786\transformed\slidingpanelayout-1.2.0\res
+com.example.a64130758_baitap.app-lifecycle-runtime-ktx-release-39 C:\Users\samh5\.gradle\caches\transforms-4\fbdf094d20bcbb2795a82cbd638751d2\transformed\lifecycle-runtime-ktx-release\res
+com.example.a64130758_baitap.app-pngs-40 D:\6 - Mobile Development\app\build\generated\res\pngs\debug
+com.example.a64130758_baitap.app-resValues-41 D:\6 - Mobile Development\app\build\generated\res\resValues\debug
+com.example.a64130758_baitap.app-packageDebugResources-42 D:\6 - Mobile Development\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.a64130758_baitap.app-packageDebugResources-43 D:\6 - Mobile Development\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.a64130758_baitap.app-debug-44 D:\6 - Mobile Development\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.a64130758_baitap.app-debug-45 D:\6 - Mobile Development\app\src\debug\res
+com.example.a64130758_baitap.app-main-46 D:\6 - Mobile Development\app\src\main\res
