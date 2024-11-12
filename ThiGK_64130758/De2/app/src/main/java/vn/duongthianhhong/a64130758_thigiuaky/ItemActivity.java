@@ -1,6 +1,5 @@
 package vn.duongthianhhong.a64130758_thigiuaky;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -8,20 +7,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ItemActivity extends AppCompatActivity {
 
-    TextView rssContent;
+    private TextView urlTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
 
-        rssContent = findViewById(R.id.rssContent);
+        urlTextView = findViewById(R.id.urlTextView);
 
-        // Nhận dữ liệu từ Intent
-        Intent intent = getIntent();
-        String rssLink = intent.getStringExtra("rss_link");
+        // Nhận URL từ Intent
+        String selectedUrl = getIntent().getStringExtra("selectedUrl");
 
-        // Hiển thị nội dung RSS link
-        rssContent.setText("RSS Link: " + rssLink);
+        // Hiển thị URL lên TextView
+        if (selectedUrl != null) {
+            urlTextView.setText(selectedUrl);
+        }
     }
 }

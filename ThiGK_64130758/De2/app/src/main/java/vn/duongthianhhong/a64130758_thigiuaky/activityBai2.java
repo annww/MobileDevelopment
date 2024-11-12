@@ -8,40 +8,57 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import java.util.ArrayList;
 
 public class activityBai2 extends AppCompatActivity {
 
-    ListView rssListView;
-    String[] rssLinks = {
-            "https://vnexpress.net/rss/tin-moi-nhat.rss",
-            "https://tuoitre.vn/rss/tin-moi-nhat.rss",
-            "https://thanhnien.vn/rss/home.rss",
-            "https://nld.com.vn/rss/home.rss"
-    };
-
+    private ListView rssListView;
+    private ArrayList<String> rssUrls;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_bai2);
 
+        // Khởi tạo ListView và danh sách URL
         rssListView = findViewById(R.id.rssListView);
+        rssUrls = new ArrayList<>();
 
-        // Tạo ArrayAdapter và thiết lập cho ListView
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, rssLinks);
+        // Thêm các địa chỉ RSS vào danh sách
+        rssUrls.add("https://vnexpress.net/rss/tin-moi-nhat.rss");
+        rssUrls.add("https://tuoitre.vn/rss/tin-moi-nhat.rss");
+        rssUrls.add("https://thanhnien.vn/rss/home.rss");
+        rssUrls.add("https://nhandan.vn/rss/home.rss");
+
+        // Sử dụng ArrayAdapter để hiển thị danh sách URL
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_list_item_1, rssUrls);
         rssListView.setAdapter(adapter);
 
-        // Bắt sự kiện click cho từng item của ListView
+        // Bắt sự kiện khi một mục trong ListView được nhấn
         rssListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedLink = rssLinks[position];
+                // Lấy URL từ danh sách
+                String selectedUrl = rssUrls.get(position);
 
-                // Sử dụng Intent để mở liên kết bằng trình duyệt
-                Intent intent = new Intent(activityBai2.this, ItemActivity.class);
-                intent.putExtra("rss_link", selectedLink);
+                // Tạo Intent để mở URL trong trình duyệt
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(selectedUrl));
                 startActivity(intent);
             }
         });
+    }
+
+    public void QuayVeManHinhChinh(View v){
+        // Chuyen ve man hinh chinh
+        Intent iNHChinh = new Intent(activityBai2.this, MainActivity.class);
+        startActivity(iNHChinh);
     }
 }
