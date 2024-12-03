@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "91600145111",
+    "project_id": "authenticationapp11-c096a",
+    "storage_bucket": "authenticationapp11-c096a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91600145111:android:59e41046aacb9099aa7e92",
+        "android_client_info": {
+          "package_name": "ntu.duongthianhhong.authenticationapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKc8GDu662gZBf3TLGLpavP6pAwsbK8eE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
