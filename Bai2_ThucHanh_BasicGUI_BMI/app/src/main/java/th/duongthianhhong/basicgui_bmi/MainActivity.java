@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etHeight = findViewById(R.id.inputheight);
-        etWeight = findViewById(R.id.inputweight);
+        etHeight = findViewById(R.id.inputHeight);
+        etWeight = findViewById(R.id.inputWeight);
         radioGroup = findViewById(R.id.radioGroup);
         radioAsian = findViewById(R.id.radioAsian);
         radioNonAsian = findViewById(R.id.radioNonAsian);
