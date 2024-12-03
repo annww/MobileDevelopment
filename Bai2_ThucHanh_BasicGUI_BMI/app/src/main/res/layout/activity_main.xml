@@ -90,7 +90,7 @@
             android:id="@+id/radioNonAsian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Không phải người Châu Á"
+            android:text="WHO"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/sora_medium" />
     </RadioGroup>
