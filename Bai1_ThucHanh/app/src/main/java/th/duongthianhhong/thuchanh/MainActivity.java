@@ -1,103 +1,79 @@
 package th.duongthianhhong.thuchanh;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText edtNumber1, edtNumber2;
+    private RadioGroup radioGroupOperations;
+    private RadioButton rbAdd, rbSubtract, rbMultiply, rbDivide;
+    private Button btnCalculate;
     private TextView txtResult;
-    private Button btnAdd, btnSubtract, btnMultiply, btnDivide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Khởi tạo các đối tượng giao diện
         edtNumber1 = findViewById(R.id.edtNumber1);
         edtNumber2 = findViewById(R.id.edtNumber2);
+        radioGroupOperations = findViewById(R.id.radioGroupOperations);
+        rbAdd = findViewById(R.id.rbAdd);
+        rbSubtract = findViewById(R.id.rbSubtract);
+        rbMultiply = findViewById(R.id.rbMultiply);
+        rbDivide = findViewById(R.id.rbDivide);
+        btnCalculate = findViewById(R.id.btnCalculate);
         txtResult = findViewById(R.id.txtResult);
-        btnAdd = findViewById(R.id.btnAdd);
-        btnSubtract = findViewById(R.id.btnSubtract);
-        btnMultiply = findViewById(R.id.btnMultiply);
-        btnDivide = findViewById(R.id.btnDivide);
 
-        // Sự kiện cho nút Cộng
-        btnAdd.setOnClickListener(new View.OnClickListener() {
+        btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                performOperation('+');
-            }
-        });
 
-        // Sự kiện cho nút Trừ
-        btnSubtract.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                performOperation('-');
-            }
-        });
+                String number1Str = edtNumber1.getText().toString();
+                String number2Str = edtNumber2.getText().toString();
 
-        // Sự kiện cho nút Nhân
-        btnMultiply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                performOperation('*');
-            }
-        });
-
-        // Sự kiện cho nút Chia
-        btnDivide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                performOperation('/');
-            }
-        });
-    }
-
-    private void performOperation(char operation) {
-        // Lấy giá trị từ các EditText
-        String num1Str = edtNumber1.getText().toString();
-        String num2Str = edtNumber2.getText().toString();
-
-        if (!num1Str.isEmpty() && !num2Str.isEmpty()) {
-            try {
-                double num1 = Double.parseDouble(num1Str);
-                double num2 = Double.parseDouble(num2Str);
-                double result = 0;
-
-                // Thực hiện phép toán tương ứng
-                switch (operation) {
-                    case '+':
-                        result = num1 + num2;
-                        break;
-                    case '-':
-                        result = num1 - num2;
-                        break;
-                    case '*':
-                        result = num1 * num2;
-                        break;
-                    case '/':
-                        if (num2 != 0) {
-                            result = num1 / num2;
-                        } else {
-                            txtResult.setText("Không thể chia cho 0!");
-                            return;
-                        }
-                        break;
+                if (number1Str.isEmpty() || number2Str.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Vui lòng nhập đủ số", Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
-                // Hiển thị kết quả
-                txtResult.setText("Kết quả: " + result);
-            } catch (NumberFormatException e) {
-                txtResult.setText("Vui lòng nhập đúng số.");
+                double number1 = Double.parseDouble(number1Str);
+                double number2 = Double.parseDouble(number2Str);
+                double result = 0;
+                boolean isOperationSelected = false;
+
+                if (rbAdd.isChecked()) {
+                    result = number1 + number2;
+                    isOperationSelected = true;
+                } else if (rbSubtract.isChecked()) {
+                    result = number1 - number2;
+                    isOperationSelected = true;
+                } else if (rbMultiply.isChecked()) {
+                    result = number1 * number2;
+                    isOperationSelected = true;
+                } else if (rbDivide.isChecked()) {
+                    if (number2 == 0) {
+                        Toast.makeText(MainActivity.this, "Không thể chia cho 0", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    result = number1 / number2;
+                    isOperationSelected = true;
+                }
+
+                if (isOperationSelected) {
+                    txtResult.setText("Kết quả: " + result);
+                } else {
+                    Toast.makeText(MainActivity.this, "Vui lòng chọn phép toán", Toast.LENGTH_SHORT).show();
+                }
             }
-        } else {
-            txtResult.setText("Vui lòng nhập đầy đủ thông tin.");
-        }
+        });
     }
 }
