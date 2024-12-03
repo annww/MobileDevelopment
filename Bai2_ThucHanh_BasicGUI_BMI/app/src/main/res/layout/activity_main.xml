@@ -25,25 +25,31 @@
         android:id="@+id/height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chiều cao (cm)"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/sora_medium"
+        android:text="Chiều cao (cm)"
+        android:layout_gravity="start"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/tinhBMI"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="40dp" />
+        app:layout_constraintTop_toBottomOf="@id/tinhBMI" />
 
-    <EditText
-        android:id="@+id/inputHeight"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/heightInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Nhập chiều cao"
-        android:fontFamily="@font/sora_medium"
-        android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@id/height"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp" />
+        android:background="#FFFFFF"
+        android:layout_marginTop="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:fontFamily="@font/sora_medium"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/weight"
@@ -52,32 +58,39 @@
         android:text="Cân nặng (kg)"
         android:fontFamily="@font/sora_medium"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/inputHeight"
+        android:layout_gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/heightInput"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="30dp" />
 
-    <EditText
-        android:id="@+id/inputWeight"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/weightInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Nhập cân nặng"
-        android:fontFamily="@font/sora_medium"
-        android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@id/weight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp" />
+        android:background="#FFFFFF"
+        android:layout_marginTop="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:fontFamily="@font/sora_medium"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/inputWeight"
+        app:layout_constraintTop_toBottomOf="@id/weightInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:gravity="center">
 
         <RadioButton
             android:id="@+id/radioAsian"

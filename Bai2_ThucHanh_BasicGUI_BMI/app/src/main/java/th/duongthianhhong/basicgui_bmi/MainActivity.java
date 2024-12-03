@@ -3,17 +3,17 @@ package th.duongthianhhong.basicgui_bmi;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.android.material.textfield.TextInputEditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etHeight, etWeight;
+    private TextInputEditText etHeight, etWeight; // Changed to TextInputEditText to match XML
     private RadioGroup radioGroup;
     private RadioButton radioAsian, radioNonAsian;
     private Button btnCalculate;
@@ -24,13 +24,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etHeight = findViewById(R.id.inputHeight);
-        etWeight = findViewById(R.id.inputWeight);
+        etHeight = findViewById(R.id.txtHeight);
+        etWeight = findViewById(R.id.txtWeight);
         radioGroup = findViewById(R.id.radioGroup);
         radioAsian = findViewById(R.id.radioAsian);
         radioNonAsian = findViewById(R.id.radioNonAsian);
         btnCalculate = findViewById(R.id.btnCalculate);
         tvResult = findViewById(R.id.tvResult);
+
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,15 +42,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculateBMI() {
-        String heightText = etHeight.getText().toString();  // Dùng đúng tên biến
-        String weightText = etWeight.getText().toString();  // Dùng đúng tên biến
+        String heightText = etHeight.getText().toString();
+        String weightText = etWeight.getText().toString();
 
         if (heightText.isEmpty() || weightText.isEmpty()) {
             Toast.makeText(MainActivity.this, "Vui lòng nhập đủ chiều cao và cân nặng!", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Kiểm tra và chuyển đổi giá trị chiều cao và cân nặng
+
         double height, weight;
         try {
             height = Double.parseDouble(heightText);
