@@ -18,13 +18,14 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton radioAsian, radioNonAsian;
     private Button btnCalculate;
     private TextView tvResult;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etHeight = findViewById(R.id.etHeight);
-        etWeight = findViewById(R.id.etWeight);
+        etHeight = findViewById(R.id.inputheight);
+        etWeight = findViewById(R.id.inputweight);
         radioGroup = findViewById(R.id.radioGroup);
         radioAsian = findViewById(R.id.radioAsian);
         radioNonAsian = findViewById(R.id.radioNonAsian);
@@ -38,20 +39,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void calculateBMI() {
-        String heightText = etHeight.getText().toString();
-        String weightText = etWeight.getText().toString();
+        String heightText = etHeight.getText().toString();  // Dùng đúng tên biến
+        String weightText = etWeight.getText().toString();  // Dùng đúng tên biến
+
         if (heightText.isEmpty() || weightText.isEmpty()) {
             Toast.makeText(MainActivity.this, "Vui lòng nhập đủ chiều cao và cân nặng!", Toast.LENGTH_SHORT).show();
             return;
         }
-        double height = Double.parseDouble(heightText);
-        double weight = Double.parseDouble(weightText);
+
+        // Kiểm tra và chuyển đổi giá trị chiều cao và cân nặng
+        double height, weight;
+        try {
+            height = Double.parseDouble(heightText);
+            weight = Double.parseDouble(weightText);
+        } catch (NumberFormatException e) {
+            Toast.makeText(MainActivity.this, "Vui lòng nhập chiều cao và cân nặng hợp lệ!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         if (height <= 0 || weight <= 0) {
             Toast.makeText(MainActivity.this, "Chiều cao và cân nặng phải lớn hơn 0!", Toast.LENGTH_SHORT).show();
             return;
         }
+
         double heightInMeters = height / 100;
         double bmi = weight / (heightInMeters * heightInMeters);
         boolean isAsian = radioAsian.isChecked();
