@@ -64,7 +64,6 @@
         android:layout_marginTop="35dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/card_bg_color"
-        android:backgroundTint="@color/green"
         app:cardElevation="0dp"
         app:cardUseCompatPadding="false"
         app:cardPreventCornerOverlap="false"
@@ -77,8 +76,8 @@
             android:id="@+id/anwserB"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:paddingLeft="20dp"
+            android:gravity="center"
             android:text="Option"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
@@ -115,7 +114,6 @@
         android:layout_marginTop="35dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/card_bg_color"
-        android:backgroundTint="@color/red"
         app:cardElevation="0dp"
         app:cardUseCompatPadding="false"
         app:cardPreventCornerOverlap="false"
