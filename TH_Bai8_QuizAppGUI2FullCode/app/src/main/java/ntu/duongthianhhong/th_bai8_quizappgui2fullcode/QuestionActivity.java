@@ -44,16 +44,12 @@ public class QuestionActivity extends AppCompatActivity {
         // Tạo danh sách câu hỏi
         questionList = getQuestionList();
 
-        // Hiển thị câu hỏi đầu tiên
         displayQuestion();
 
-        // Xử lý khi chọn đáp án
         cardA.setOnClickListener(v -> checkAnswer(0, cardA));
         cardB.setOnClickListener(v -> checkAnswer(1, cardB));
         cardC.setOnClickListener(v -> checkAnswer(2, cardC));
         cardD.setOnClickListener(v -> checkAnswer(3, cardD));
-
-        // Xử lý khi bấm nút Next
         findViewById(R.id.btnnext).setOnClickListener(v -> {
             if (!isAnswered) {
                 // Nếu chưa trả lời, báo lỗi trong tvKQ
@@ -71,7 +67,6 @@ public class QuestionActivity extends AppCompatActivity {
         });
     }
 
-    // Hiển thị câu hỏi
     private void displayQuestion() {
         Question question = questionList.get(currentQuestionIndex);
         tvQuestion.setText(question.getQuestionText());
@@ -81,14 +76,11 @@ public class QuestionActivity extends AppCompatActivity {
         answerD.setText(question.getOptions().get(3));
     }
 
-    // Kiểm tra đáp án
     private void checkAnswer(int selectedIndex, CardView selectedCard) {
-        if (isAnswered) return; // Không cho phép chọn lại nếu đã trả lời
-
+        if (isAnswered) return;
         isAnswered = true;
         Question currentQuestion = questionList.get(currentQuestionIndex);
 
-        // Kiểm tra nếu đúng
         if (selectedIndex == currentQuestion.getCorrectAnswerIndex()) {
             selectedCard.setCardBackgroundColor(getResources().getColor(R.color.green));
             tvKQ.setText("Correct..");
@@ -97,7 +89,6 @@ public class QuestionActivity extends AppCompatActivity {
             selectedCard.setCardBackgroundColor(getResources().getColor(R.color.red));
             tvKQ.setText("Wrong..");
             tvKQ.setTextColor(getResources().getColor(R.color.red));
-            // Hiển thị đáp án đúng với màu xanh
             highlightCorrectAnswer(currentQuestion.getCorrectAnswerIndex());
         }
     }
@@ -118,32 +109,35 @@ public class QuestionActivity extends AppCompatActivity {
                 break;
         }
     }
-
-    // Reset trạng thái khi bấm Next
     private void resetState() {
         isAnswered = false;
         tvKQ.setText("");
 
-        // Đặt lại màu nền mặc định cho các CardView
         cardA.setCardBackgroundColor(getResources().getColor(R.color.card_bg_color));
         cardB.setCardBackgroundColor(getResources().getColor(R.color.card_bg_color));
         cardC.setCardBackgroundColor(getResources().getColor(R.color.card_bg_color));
         cardD.setCardBackgroundColor(getResources().getColor(R.color.card_bg_color));
     }
 
-    // Tạo danh sách câu hỏi mẫu
     private List<Question> getQuestionList() {
         List<Question> questions = new ArrayList<>();
-        questions.add(new Question("Java được phát triển bởi công ty nào?",
-                Arrays.asList("Google", "Sun Microsystems", "Oracle", "Microsoft"), 1));
-        questions.add(new Question("Kiểu dữ liệu nào trong Java để lưu số thực?",
-                Arrays.asList("int", "float", "boolean", "char"), 1));
-        questions.add(new Question("Phương thức chính trong Java được định nghĩa như thế nào?",
-                Arrays.asList("main()", "public static void main()", "void main()", "public void main()"), 1));
-        questions.add(new Question("Lớp nào được sử dụng để xử lý chuỗi trong Java?",
-                Arrays.asList("String", "int", "float", "boolean"), 0));
-        questions.add(new Question("Câu lệnh nào để in ra màn hình console trong Java?",
-                Arrays.asList("print()", "echo()", "System.out.println()", "cout<<"), 2));
+        questions.add(new Question("Từ khóa nào được sử dụng để kế thừa lớp trong Java?",
+                Arrays.asList("extend", "implements", "inherit", "extends"), 3));
+        questions.add(new Question("Phương thức nào trong Java được sử dụng để lấy độ dài của chuỗi?",
+                Arrays.asList("length()", "size()", "getLength()", "charAt()"), 0));
+        questions.add(new Question("Interface trong Java được khai báo bằng từ khóa nào?",
+                Arrays.asList("abstract", "interface", "implements", "class"), 1));
+        questions.add(new Question("Trong Java, kiểu dữ liệu nào dùng để lưu trữ một ký tự?",
+                Arrays.asList("String", "char", "boolean", "int"), 1));
+        questions.add(new Question("Lệnh nào dùng để thoát khỏi vòng lặp trong Java?",
+                Arrays.asList("stop", "exit", "break", "return"), 2));
+        questions.add(new Question("Từ khóa nào dùng để xử lý ngoại lệ trong Java?",
+                Arrays.asList("catch", "try", "finally", "throw"), 1));
+        questions.add(new Question("Biến cục bộ trong Java được khai báo ở đâu?",
+                Arrays.asList("Trong một lớp", "Trong một phương thức", "Trong một interface", "Ngoài mọi lớp"), 1));
+        questions.add(new Question("Kiểu dữ liệu nào trong Java được dùng để lưu giá trị logic đúng hoặc sai?",
+                Arrays.asList("boolean", "int", "float", "String"), 0));
         return questions;
     }
+
 }
