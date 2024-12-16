@@ -18,11 +18,10 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Chuyển sang màn hình câu hỏi sau 3 giây
         new Handler().postDelayed(() -> {
             Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
             startActivity(intent);
             finish();
-        }, 3000); // 3000ms = 3 giây
+        }, 3000); 
     }
 }
